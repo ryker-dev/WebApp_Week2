@@ -6,12 +6,19 @@ body {
   font-style: italic;
 }
 #menu-table {
+  width: 100%;
   text-align: left;
   background-color: #f2f2f2;
 }
 
 #menu-table tr:nth-child(even) {
   background-color: gainsboro;
+}
+
+.menu-layout {
+  max-width: 740px;
+  text-align: center;
+  margin: auto;
 }
 
 th {
