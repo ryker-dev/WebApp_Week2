@@ -1,5 +1,23 @@
 import "./styles.css";
 
+const addbtn = document.getElementById("add-comment");
+const deletebtn = document.getElementById("remove-comments");
+const list = document.getElementById("comment-list");
+const input = document.getElementById("comment-input");
+
+addbtn.addEventListener("click", () => {
+  const li = document.createElement("li");
+  li.appendChild(document.createTextNode(input.value));
+  list.appendChild(li);
+});
+
+deletebtn.addEventListener("click", () => {
+  if (confirm("Are you sure?")) {
+    list.innerHTML = "";
+  }
+});
+
+/*
 document.getElementById("app").innerHTML = `
 <h1>Hello Vanilla!</h1>
 <div>
@@ -8,3 +26,4 @@ document.getElementById("app").innerHTML = `
   <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
 </div>
 `;
+*/
