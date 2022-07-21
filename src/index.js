@@ -10,6 +10,10 @@ addbtn.addEventListener("click", () => {
   const div = document.createElement("div");
   div.className = "comment";
 
+  const deleteButton = document.createElement("button");
+  deleteButton.className = "remove-comment";
+  deleteButton.innerHTML = "X";
+
   const rating = document.createElement("p");
   rating.className = "comment-rating";
   rating.appendChild(document.createTextNode(stars.value));
@@ -18,6 +22,7 @@ addbtn.addEventListener("click", () => {
   review.className = "comment-text";
   review.appendChild(document.createTextNode(input.value));
 
+  div.appendChild(deleteButton);
   div.appendChild(rating);
   div.appendChild(review);
   list.appendChild(div);

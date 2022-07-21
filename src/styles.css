@@ -25,6 +25,11 @@ body {
   display: flex;
 }
 
+#remove-comment {
+  background-color: red;
+  font-size: 10rem;
+}
+
 th {
   background-color: #b0c4cf;
   padding-top: 0.5rem;
