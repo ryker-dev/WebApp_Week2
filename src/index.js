@@ -13,6 +13,9 @@ addbtn.addEventListener("click", () => {
   const deleteButton = document.createElement("button");
   deleteButton.className = "remove-comment";
   deleteButton.innerHTML = "X";
+  deleteButton.addEventListener("click", () => {
+    deleteButton.parentElement.remove();
+  });
 
   const rating = document.createElement("p");
   rating.className = "comment-rating";
@@ -32,7 +35,15 @@ addbtn.addEventListener("click", () => {
 
 deletebtn.addEventListener("click", () => {
   if (confirm("Are you sure?")) {
-    list.innerHTML = "";
+    const buttons = document.querySelectorAll(".remove-comment");
+    buttons.forEach((button) => {
+      button.style.display = "block";
+    });
+    /*
+    if (buttons.style.display === "none") {
+      buttons.style.display = "block";
+    }
+    */
   }
 });
 
