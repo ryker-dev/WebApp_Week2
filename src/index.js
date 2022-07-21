@@ -16,7 +16,9 @@ addbtn.addEventListener("click", () => {
 
   const rating = document.createElement("p");
   rating.className = "comment-rating";
-  rating.appendChild(document.createTextNode(stars.value));
+  rating.appendChild(
+    document.createTextNode(stars.options[stars.selectedIndex].text)
+  );
 
   const review = document.createElement("p");
   review.className = "comment-text";
