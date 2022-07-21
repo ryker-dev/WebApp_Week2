@@ -21,6 +21,10 @@ body {
   margin: auto;
 }
 
+.comment {
+  display: flex;
+}
+
 th {
   background-color: #b0c4cf;
   padding-top: 0.5rem;

@@ -4,11 +4,23 @@ const addbtn = document.getElementById("add-comment");
 const deletebtn = document.getElementById("remove-comments");
 const list = document.getElementById("comment-list");
 const input = document.getElementById("comment-input");
+const stars = document.getElementById("select-stars");
 
 addbtn.addEventListener("click", () => {
-  const li = document.createElement("li");
-  li.appendChild(document.createTextNode(input.value));
-  list.appendChild(li);
+  const div = document.createElement("div");
+  div.className = "comment";
+
+  const rating = document.createElement("p");
+  rating.className = "comment-rating";
+  rating.appendChild(document.createTextNode(stars.value));
+
+  const review = document.createElement("p");
+  review.className = "comment-text";
+  review.appendChild(document.createTextNode(input.value));
+
+  div.appendChild(rating);
+  div.appendChild(review);
+  list.appendChild(div);
 });
 
 deletebtn.addEventListener("click", () => {
